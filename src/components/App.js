@@ -1,7 +1,11 @@
+import Home from "./inhome/home";
+import Nav from "./nav/nav";
+
 function App() {
   return (
     <div>
-      <h1>React</h1>
+      <Nav />
+      <Home />
     </div>
   );
 }
