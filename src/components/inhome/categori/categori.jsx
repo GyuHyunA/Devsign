@@ -5,7 +5,7 @@ const CategoriStyle = styled.div`
   width: 200px;
   position: fixed;
   top: 180px;
-  margin-left: 360px;
+  margin-left: calc(50% - 620px);
 
   .categori-wrap {
     width: 100%;

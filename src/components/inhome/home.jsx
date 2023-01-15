@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Incontents from "../content/incontents";
 
 const HomeStyle = styled.section`
   width: 100vw;
@@ -34,7 +36,7 @@ const Home = () => {
   return (
     <HomeStyle>
       <div className="contents-wrap">
-        <a href="/">
+        <a href="../content/incontents.jsx">
           <div className="thumb">
             <div className="img"></div>
           </div>
