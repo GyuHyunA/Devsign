@@ -50,3 +50,19 @@ li {
   padding: 0;
   list-style: none;
 }
+
+// 매크로
+.wire-icon-a {
+  width: 23px;
+  height: 23px;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.ml {
+  margin-left: 15px;
+}
+
+.hr {
+  border: 1px solid #eaeaea;
+}

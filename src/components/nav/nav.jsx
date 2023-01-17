@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavStyled = styled.nav`
@@ -47,7 +48,9 @@ const NavStyled = styled.nav`
       li:nth-child(3) {
         margin-left: 40px;
       }
-      
+    }
+    .nav-active {
+      color: #ffab87;
     }
   }
 `;
@@ -57,21 +60,23 @@ const Nav = () => {
     <NavStyled>
       <div className="nav-contain">
         <div className="nav-logo-wrap">
-          <a href="/">
+          <Link to="/">
             <div className="temp-logo"></div>
             {/* <img src="" alt="" /> */}
             <h2>블로그</h2>
-          </a>
+          </Link>
         </div>
         <ul className="nav-navlist">
           <li>
-            <a href="/">Post</a>
+            <Link to="/" className="nav-active">
+              Post
+            </Link>
           </li>
           <li>
-            <a href="/">Work</a>
+            <Link to="/work">Work</Link>
           </li>
           <li>
-            <a href="/">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>
