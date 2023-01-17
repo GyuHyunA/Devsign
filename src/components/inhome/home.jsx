@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Categori from "./categori/categori";
 
 const HomeStyle = styled.section`
-
   .contents-wrap {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 180px;
+    display: flex;
+    justify-content: center;
     .thumb {
       width: 100%;
       .img {
@@ -30,6 +35,7 @@ const HomeStyle = styled.section`
 const Home = () => {
   return (
     <HomeStyle>
+      <Categori />
       <div className="contents-wrap">
         <Link to="content">
           <div className="thumb">
