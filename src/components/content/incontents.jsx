@@ -21,7 +21,10 @@ const ContentsStyle = styled.section`
       }
       .share-wrap {
         display: flex;
-        .wire-icon-a:nth-child(2) {
+        img {
+          height: 20px;
+        }
+        img:nth-child(2) {
           margin-left: 15px;
         }
       }
@@ -60,10 +63,10 @@ const Incontents = () => {
         <div className="title-wrap">
           <h2 className="title">제목입니다</h2>
           <div className="share-wrap">
-            {/* <img src="" alt="" className="logo_heart" />
-          <img src="" alt="" className="logo2_share" /> */}
-            <div className="wire-icon-a"></div>
-            <div className="wire-icon-a"></div>
+            <img src="/assets/icons/heart.png" alt="" className="logo_heart" />
+            <img src="/assets/icons/share.png" alt="" className="logo2_share" />
+            {/* <div className="wire-icon-a cursor"></div>
+            <div className="wire-icon-a cursor"></div> */}
           </div>
         </div>
         <div className="date-visit-wrap">
