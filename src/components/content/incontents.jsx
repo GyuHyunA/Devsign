@@ -63,10 +63,8 @@ const Incontents = () => {
         <div className="title-wrap">
           <h2 className="title">제목입니다</h2>
           <div className="share-wrap">
-            <img src="/assets/icons/heart.png" alt="" className="logo_heart" />
-            <img src="/assets/icons/share.png" alt="" className="logo2_share" />
-            {/* <div className="wire-icon-a cursor"></div>
-            <div className="wire-icon-a cursor"></div> */}
+            <img src="/assets/icons/heart.png" alt="" className="logo_heart cursor" />
+            <img src="/assets/icons/share.png" alt="" className="logo_share cursor" />
           </div>
         </div>
         <div className="date-visit-wrap">
