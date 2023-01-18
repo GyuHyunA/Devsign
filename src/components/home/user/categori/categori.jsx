@@ -29,14 +29,12 @@ const CategoriStyle = styled.div`
         border: 2px solid #d9d9d9;
         border-radius: 5px;
       }
-      .temp-search {
+      img {
         position: absolute;
-        width: 26px;
-        height: 26px;
+        height: 22px;
         top: 5px;
         right: 5px;
-        border-radius: 50%;
-        background: #515151;
+        cursor: pointer;
       }
     }
   }
@@ -53,6 +51,13 @@ const CategoriStyle = styled.div`
       color: #b1b1b1;
       margin-bottom: 15px;
     }
+    .cate-link {
+      margin-top: 15px;
+      img {
+        height: 24px;
+        margin-right: 10px;
+      }
+    }
   }
 `;
 
@@ -67,22 +72,21 @@ const Categori = () => {
         </ul>
         <div className="cate-search">
           <input type="text" />
-          {/* <img src="" alt="" /> */}
-          <div className="temp-search"></div>
+          <img src="/assets/icons/search.png" alt="" />
         </div>
       </div>
       <div className="cate-info">
         <h2>GyuHyun</h2>
         <span>FrontEnd Developer</span>
         <div className="cate-link">
-          <a href="/">
-            <img src="" alt="" />
+          <a href="https://github.com/GyuHyunA" target={"_blank"} rel="noreferrer noopener">
+            <img src="/assets/icons/github.png" alt="github" />
           </a>
-          <a href="/">
-            <img src="" alt="" />
+          <a href="mailto:ghahn97@gmail.com">
+            <img src="/assets/icons/mail.png" alt="mail" />
           </a>
-          <a href="/">
-            <img src="" alt="" />
+          <a href="https://www.instagram.com/_dev_sign_" target={"_blank"} rel="noreferrer noopener">
+            <img src="/assets/icons/insta.png" alt="insta" />
           </a>
         </div>
       </div>
