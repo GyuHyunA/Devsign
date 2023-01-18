@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Contact from "../components/contact/contact";
 import Incontents from "../components/content/incontents";
 import Home from "../components/home/home";
 import Nav from "../components/nav/nav";
@@ -14,6 +15,7 @@ function App() {
         <Route path="/content" element={<Incontents />} />
         <Route path="/post" element={<Posthome />} />
         <Route path="/work" element={<WorkHome />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );
