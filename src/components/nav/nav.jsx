@@ -68,7 +68,7 @@ const Nav = () => {
         </div>
         <ul className="nav-navlist">
           <li>
-            <Link to="/" className="nav-active">
+            <Link to="/post" className="nav-active">
               Post
             </Link>
           </li>
