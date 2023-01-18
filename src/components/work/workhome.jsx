@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const PostHomeStyle = styled.section`
+const WorkHomeStyle = styled.section`
   .posthome-wrap {
     width: 100vw;
     height: 100vh;
@@ -11,14 +11,14 @@ const PostHomeStyle = styled.section`
   }
 `;
 
-const Posthome = () => {
+const WorkHome = () => {
   return (
-    <PostHomeStyle>
+    <WorkHomeStyle>
       <div className="posthome-wrap">
         <h6>페이지 준비중 입니다</h6>
       </div>
-    </PostHomeStyle>
+    </WorkHomeStyle>
   );
 };
 
-export default Posthome;
+export default WorkHome;
