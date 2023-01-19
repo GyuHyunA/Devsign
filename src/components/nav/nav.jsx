@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -56,20 +56,24 @@ const NavStyled = styled.nav`
 `;
 
 const Nav = () => {
+  const [IsNavList, setisNavList] = useState(3);
+
   return (
     <NavStyled>
       <div className="nav-contain">
         <div className="nav-logo-wrap">
-          <Link to="/">
+          <Link to="/" onClick={() => setisNavList(3)}>
             <div className="temp-logo"></div>
             {/* <img src="" alt="" /> */}
             <h2>블로그</h2>
           </Link>
         </div>
         <ul className="nav-navlist">
-          {navList.map((v) => (
+          {navList.map((v, i) => (
             <li key={v.id}>
-              <Link to={`/${v.url}`}>{v.tag}</Link>
+              <Link to={`/${v.url}`} onClick={() => setisNavList(v.id)} className={`${IsNavList === i ? "nav-active" : " "}`}>
+                {v.tag}
+              </Link>
             </li>
           ))}
         </ul>
@@ -82,18 +86,21 @@ export default Nav;
 
 const navList = [
   {
-    id: 1,
+    id: 0,
     tag: "Post",
     url: "post",
   },
   {
-    id: 2,
+    id: 1,
     tag: "Work",
     url: "work",
   },
   {
-    id: 3,
+    id: 2,
     tag: "Contact",
     url: "contact",
+  },
+  {
+    id: "logo"
   },
 ];

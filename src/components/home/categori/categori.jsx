@@ -17,6 +17,10 @@ const CategoriStyle = styled.div`
       margin-bottom: 15px;
       li {
         font-size: 16px;
+        cursor: pointer;
+      }
+      .list-active {
+        color: #ffab87;
       }
     }
     .cate-search {
@@ -68,7 +72,7 @@ const Categori = () => {
         <h2>카테고리 목록</h2>
         <div className="hr"></div>
         <ul className="cate-list">
-          <li>전체보기(0)</li>
+          <li className="list-active">전체보기(0)</li>
         </ul>
         <div className="cate-search">
           <input type="text" />
