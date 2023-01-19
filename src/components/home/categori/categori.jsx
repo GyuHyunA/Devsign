@@ -79,15 +79,11 @@ const Categori = () => {
         <h2>GyuHyun</h2>
         <span>FrontEnd Developer</span>
         <div className="cate-link">
-          <a href="https://github.com/GyuHyunA" target={"_blank"} rel="noreferrer noopener">
-            <img src="/assets/icons/github.png" alt="github" />
-          </a>
-          <a href="mailto:ghahn97@gmail.com">
-            <img src="/assets/icons/mail.png" alt="mail" />
-          </a>
-          <a href="https://www.instagram.com/_dev_sign_" target={"_blank"} rel="noreferrer noopener">
-            <img src="/assets/icons/insta.png" alt="insta" />
-          </a>
+          {cateLinkList.map((v) => (
+            <a href={v.href} target={v.target} rel="noreferrer noopener" key={v.id}>
+              <img src={`/assets/icons/${v.src}`} alt={v.name} />
+            </a>
+          ))}
         </div>
       </div>
     </CategoriStyle>
@@ -95,3 +91,27 @@ const Categori = () => {
 };
 
 export default Categori;
+
+const cateLinkList = [
+  {
+    id: 1,
+    name: "github",
+    href: "https://github.com/GyuHyunA",
+    src: "github.png",
+    target: "_blank",
+  },
+  {
+    id: 2,
+    name: "mail",
+    href: "mailto:ghahn97@gmail.com",
+    src: "mail.png",
+    target: "_self",
+  },
+  {
+    id: 3,
+    name: "insta",
+    href: "https://www.instagram.com/_dev_sign_",
+    src: "insta.png",
+    target: "_blank",
+  },
+];

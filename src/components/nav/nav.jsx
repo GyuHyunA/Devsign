@@ -67,17 +67,11 @@ const Nav = () => {
           </Link>
         </div>
         <ul className="nav-navlist">
-          <li>
-            <Link to="/post" className="nav-active">
-              Post
-            </Link>
-          </li>
-          <li>
-            <Link to="/work">Work</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
+          {navList.map((v) => (
+            <li key={v.id}>
+              <Link to={`/${v.url}`}>{v.tag}</Link>
+            </li>
+          ))}
         </ul>
       </div>
     </NavStyled>
@@ -85,3 +79,21 @@ const Nav = () => {
 };
 
 export default Nav;
+
+const navList = [
+  {
+    id: 1,
+    tag: "Post",
+    url: "post",
+  },
+  {
+    id: 2,
+    tag: "Work",
+    url: "work",
+  },
+  {
+    id: 3,
+    tag: "Contact",
+    url: "contact",
+  },
+];

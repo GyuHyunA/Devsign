@@ -1,11 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import Contact from "../components/contact/contact";
-import Home from "../components/home/user/home";
 import Nav from "../components/nav/nav";
-import Posthome from "../components/post/posthome";
+import Home from "../components/home/home";
 import WorkHome from "../components/work/workhome";
-import Incontents from "../components/content/user/incontents";
-import Nopage from "../components/home/user/nopaage";
+import Posthome from "../components/post/posthome";
+import Contact from "../components/contact/contact";
+import Incontents from "../components/content/incontents";
+import Nopage from "../components/home/nopaage";
+
 
 function App() {
   return (
