@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const SetCateStyle = styled.div`
-  margin-right: 38px;
+  position: fixed;
+  left: calc(50% - 600px);
   .setcate-wrap {
     width: 250px;
     height: 500px;
@@ -43,8 +44,8 @@ const CateList = styled.ul`
   li {
     margin-bottom: 5px;
   }
-  a.active{
-    color: #FF7A41;
+  a.active {
+    color: #ff7a41;
   }
 `;
 

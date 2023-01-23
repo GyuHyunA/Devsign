@@ -1,8 +1,7 @@
 import React from "react";
-import { Link, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import CategoriA from "./categoria";
-import SettingMainA from "./setting/setmain";
 
 const HomeAStyle = styled.section`
   .contents-wrap {

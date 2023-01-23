@@ -7,6 +7,7 @@ const NavStyled = styled.nav`
   height: 80px;
   background: #ffffff;
   position: fixed;
+  z-index: 999;
   .nav-contain {
     width: 100%;
     height: 100%;
