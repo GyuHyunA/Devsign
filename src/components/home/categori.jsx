@@ -28,7 +28,7 @@ const CategoriStyle = styled.div`
       width: 200px;
       input {
         position: relative;
-        width: 200px;
+        width: 192px;
         height: 30px;
         border: 2px solid #d9d9d9;
         border-radius: 5px;
@@ -36,8 +36,8 @@ const CategoriStyle = styled.div`
       img {
         position: absolute;
         height: 22px;
-        top: 5px;
-        right: 5px;
+        top: 7px;
+        right: 13px;
         cursor: pointer;
       }
     }
@@ -96,7 +96,7 @@ const Categori = () => {
 
 export default Categori;
 
-const cateLinkList = [
+export const cateLinkList = [
   {
     id: 1,
     name: "github",

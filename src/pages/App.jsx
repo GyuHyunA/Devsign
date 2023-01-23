@@ -6,7 +6,7 @@ import Posthome from "../components/post/posthome";
 import Contact from "../components/contact/contact";
 import Incontents from "../components/content/incontents";
 import Nopage from "../components/home/nopaage";
-
+import HomeMainA from "../components/admin/homemaina";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path="/post" element={<Posthome />} />
         <Route path="/work" element={<WorkHome />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/homea/*" element={<HomeMainA />} />
       </Routes>
     </>
   );

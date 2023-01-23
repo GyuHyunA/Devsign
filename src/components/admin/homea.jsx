@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Routes } from "react-router-dom";
 import styled from "styled-components";
-import Categori from "./categori";
+import CategoriA from "./categoria";
+import SettingMainA from "./setting/setmain";
 
-const HomeStyle = styled.section`
+const HomeAStyle = styled.section`
   .contents-wrap {
     width: 100vw;
     height: 100vh;
@@ -32,10 +33,10 @@ const HomeStyle = styled.section`
   }
 `;
 
-const Home = () => {
+const Homea = () => {
   return (
-    <HomeStyle>
-      <Categori />
+    <HomeAStyle>
+      <CategoriA />
       <div className="contents-wrap">
         <Link to="content">
           <div className="thumb">
@@ -47,8 +48,8 @@ const Home = () => {
           </div>
         </Link>
       </div>
-    </HomeStyle>
+    </HomeAStyle>
   );
 };
 
-export default Home;
+export default Homea;
