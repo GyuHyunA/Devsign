@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -7,6 +7,7 @@ const NavStyled = styled.nav`
   height: 80px;
   background: #ffffff;
   position: fixed;
+  z-index: 999;
   .nav-contain {
     width: 100%;
     height: 100%;
@@ -56,28 +57,26 @@ const NavStyled = styled.nav`
 `;
 
 const Nav = () => {
+  const [IsNavList, setisNavList] = useState(3);
+
   return (
     <NavStyled>
       <div className="nav-contain">
         <div className="nav-logo-wrap">
-          <Link to="/">
+          <Link to="/" onClick={() => setisNavList(3)}>
             <div className="temp-logo"></div>
             {/* <img src="" alt="" /> */}
             <h2>블로그</h2>
           </Link>
         </div>
         <ul className="nav-navlist">
-          <li>
-            <Link to="/post" className="nav-active">
-              Post
-            </Link>
-          </li>
-          <li>
-            <Link to="/work">Work</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
+          {navList.map((v, i) => (
+            <li key={v.id}>
+              <Link to={`/${v.url}`} onClick={() => setisNavList(v.id)} className={`${IsNavList === i ? "nav-active" : " "}`}>
+                {v.tag}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </NavStyled>
@@ -85,3 +84,24 @@ const Nav = () => {
 };
 
 export default Nav;
+
+const navList = [
+  {
+    id: 0,
+    tag: "Post",
+    url: "post",
+  },
+  {
+    id: 1,
+    tag: "Work",
+    url: "work",
+  },
+  {
+    id: 2,
+    tag: "Contact",
+    url: "contact",
+  },
+  {
+    id: "logo"
+  },
+];

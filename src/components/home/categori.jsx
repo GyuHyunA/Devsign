@@ -17,6 +17,10 @@ const CategoriStyle = styled.div`
       margin-bottom: 15px;
       li {
         font-size: 16px;
+        cursor: pointer;
+      }
+      .list-active {
+        color: #ffab87;
       }
     }
     .cate-search {
@@ -24,7 +28,7 @@ const CategoriStyle = styled.div`
       width: 200px;
       input {
         position: relative;
-        width: 200px;
+        width: 192px;
         height: 30px;
         border: 2px solid #d9d9d9;
         border-radius: 5px;
@@ -32,8 +36,8 @@ const CategoriStyle = styled.div`
       img {
         position: absolute;
         height: 22px;
-        top: 5px;
-        right: 5px;
+        top: 7px;
+        right: 13px;
         cursor: pointer;
       }
     }
@@ -68,7 +72,7 @@ const Categori = () => {
         <h2>카테고리 목록</h2>
         <div className="hr"></div>
         <ul className="cate-list">
-          <li>전체보기(0)</li>
+          <li className="list-active">전체보기(0)</li>
         </ul>
         <div className="cate-search">
           <input type="text" />
@@ -79,15 +83,11 @@ const Categori = () => {
         <h2>GyuHyun</h2>
         <span>FrontEnd Developer</span>
         <div className="cate-link">
-          <a href="https://github.com/GyuHyunA" target={"_blank"} rel="noreferrer noopener">
-            <img src="/assets/icons/github.png" alt="github" />
-          </a>
-          <a href="mailto:ghahn97@gmail.com">
-            <img src="/assets/icons/mail.png" alt="mail" />
-          </a>
-          <a href="https://www.instagram.com/_dev_sign_" target={"_blank"} rel="noreferrer noopener">
-            <img src="/assets/icons/insta.png" alt="insta" />
-          </a>
+          {cateLinkList.map((v) => (
+            <a href={v.href} target={v.target} rel="noreferrer noopener" key={v.id}>
+              <img src={`/assets/icons/${v.src}`} alt={v.name} />
+            </a>
+          ))}
         </div>
       </div>
     </CategoriStyle>
@@ -95,3 +95,27 @@ const Categori = () => {
 };
 
 export default Categori;
+
+export const cateLinkList = [
+  {
+    id: 1,
+    name: "github",
+    href: "https://github.com/GyuHyunA",
+    src: "github.png",
+    target: "_blank",
+  },
+  {
+    id: 2,
+    name: "mail",
+    href: "mailto:ghahn97@gmail.com",
+    src: "mail.png",
+    target: "_self",
+  },
+  {
+    id: 3,
+    name: "insta",
+    href: "https://www.instagram.com/_dev_sign_",
+    src: "insta.png",
+    target: "_blank",
+  },
+];
