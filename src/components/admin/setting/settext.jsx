@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import SetCate from "./setcate/setcate";
 
 const SettingContentStyle = styled.section`
   position: relative;
@@ -8,7 +7,6 @@ const SettingContentStyle = styled.section`
   display: flex;
   justify-content: center;
   margin-left: 260px;
-  overflow-x: hidden;
   .content-wrap {
     width: 800px;
     height: 85px;
@@ -46,6 +44,11 @@ const SettingContentStyle = styled.section`
       width: 140px;
       border-right: 1px solid #eff1f4;
       margin-right: 10px;
+      p {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 13px;
+      }
     }
     .del_eidt_pu {
       button {
@@ -67,15 +70,13 @@ const SettingContentStyle = styled.section`
       }
     }
   }
-  .contents-align {
-  }
   h2 {
     font-weight: 400;
     margin-bottom: 10px;
   }
 `;
 
-const FilterWrap = styled.div`
+export const FilterWrap = styled.div`
   position: relative;
   display: flex;
   align-items: center;
@@ -116,7 +117,6 @@ const SettingContents = () => {
   const [isclick, setIsclick] = useState(false);
   return (
     <SettingContentStyle>
-      <SetCate />
       <div className="contents-align">
         <h2>글 관리</h2>
         <FilterWrap className="filter-wrap">

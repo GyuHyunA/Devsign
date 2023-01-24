@@ -133,7 +133,7 @@ const CategoriA = () => {
         <Link to="/homea" className="cate-write">
           <span>글쓰기</span>
         </Link>
-        <Link to="/homea/text" className="cate-setting">
+        <Link to="/homea/setting" className="cate-setting">
           <img src="/assets/icons/setting.png" alt="" />
         </Link>
       </div>

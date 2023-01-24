@@ -1,11 +1,25 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import SettingContents from "./settext";
+import styled from "styled-components";
+import SetCate from "./setcate/setcate";
+import SetChart from "./setchart";
+import SettingText from "./settext";
 
-export default function SettingMainA() {
+const SetMainAStle = styled.div`
+  position: relative;
+`;
+
+function SettingMainA() {
   return (
-    <Routes>
-      <Route path="/" element={<SettingContents />} />
-    </Routes>
+    <SetMainAStle>
+      <SetCate />
+      <Routes>
+        <Route path="/" element={<SettingText />} />
+        <Route path="/text/*" element={<SettingText />} />
+        <Route path="/chart/*" element={<SetChart />} />
+      </Routes>
+    </SetMainAStle>
   );
 }
+
+export default SettingMainA;

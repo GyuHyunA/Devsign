@@ -6,6 +6,7 @@ import styled from "styled-components";
 const SetCateStyle = styled.div`
   position: fixed;
   left: calc(50% - 600px);
+  top: 180px;
   .setcate-wrap {
     width: 250px;
     height: 500px;
@@ -93,21 +94,21 @@ const catelist = [
     children: [
       {
         id: 1,
-        link: "/homea/text",
+        link: "/homea/setting/text",
         name: "글 관리",
         catenum: "글 관리",
       },
       {
         id: 2,
-        link: "/homea/page",
+        link: "/homea/setting/page",
         name: "페이지 관리",
         catenum: "페이지 관리",
       },
       {
         id: 3,
-        link: "/homea/categori",
+        link: "/homea/setting/categori",
         name: "카테고리 관리",
-        catenum: "페이지 관리",
+        catenum: "카테고리 관리",
       },
     ],
   },
@@ -118,7 +119,7 @@ const catelist = [
     children: [
       {
         id: 4,
-        link: "/homea/reply",
+        link: "/homea/setting/reply",
         name: "댓글 관리",
         catenum: "댓글 관리",
       },
@@ -131,7 +132,7 @@ const catelist = [
     children: [
       {
         id: 5,
-        link: "/homea/chart",
+        link: "/homea/setting/chart",
         name: "방문 통계",
         catenum: "방문 통계",
       },
