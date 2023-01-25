@@ -83,11 +83,13 @@ const Incontents = ({ title, contents, hesh, cate }) => {
         </section>
         <div className="hr"></div>
         <div className="hashtag-wrap">
-          {hesh.map((v) => (
-            <div className="tag-box" key={v.id}>
-              <span className="tag">#{v.tag}</span>
-            </div>
-          ))}
+          {hesh.map((v) => {
+            return (
+              <div className="tag-box" key={v.id}>
+                <span className="tag">#{v.tag}</span>
+              </div>
+            );
+          })}
           <div className="tag-box">
             <span className="tag">${cate}</span>
           </div>
