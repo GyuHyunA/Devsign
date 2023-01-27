@@ -253,6 +253,51 @@ const PostChartStyle = styled.div`
       }
     }
   }
+  .control-wrap {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .next-prev-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 21px;
+        margin: 0 8px;
+      }
+      span {
+        font-size: 21px;
+        font-weight: 400;
+        margin: 0 8px;
+      }
+    }
+    .btn-wrap {
+      position: absolute;
+      right: 0;
+      button {
+        width: 47px;
+        height: 26px;
+        border-top: 1px solid #c2cad3;
+        border-bottom: 1px solid #c2cad3;
+        border-left: 1px solid #c2cad3;
+        border-right: none;
+        background: white;
+        cursor: pointer;
+        &:nth-child(3) {
+          border-right: 1px solid #c2cad3;
+        }
+        &.active {
+          color: white;
+          background: #6d6d6d;
+          border: none;
+        }
+        
+      }
+    }
+  }
 `;
 
 const PostChart = () => {
@@ -267,6 +312,22 @@ const PostChart = () => {
             <span className="view">조회수</span>
             <span className="view-num">0</span>
           </div>
+        </div>
+      </div>
+      <div className="control-wrap">
+        <div className="next-prev-wrap">
+          <img src="/assets/icons/prev.png" alt="" />
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <img src="/assets/icons/next.png" alt="" />
+        </div>
+        <div className="btn-wrap">
+          <button>10</button>
+          <button className="active">20</button>
+          <button>30</button>
         </div>
       </div>
     </PostChartStyle>

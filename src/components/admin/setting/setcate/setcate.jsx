@@ -52,6 +52,9 @@ const CateList = styled.ul`
 
 const SetCate = () => {
   const [isClick, setIsClick] = useState("글 관리");
+  const toggle = (e) => {
+    setIsClick(e.catenum);
+  }
   return (
     <SetCateStyle>
       <div className="setcate-wrap">
@@ -63,8 +66,9 @@ const SetCate = () => {
             </CateTitle>
             <div className="hr"></div>
             {v.children.map((val) => (
+              // 오류 있음 -> 새로고침시 url은 유지하지만 catenum은 초기화
               <CateList key={val.id}>
-                <li onClick={() => setIsClick(val.catenum)}>
+                <li onClick={() => toggle(val)}>
                   <Link to={val.link} className={`${isClick === val.name ? "active" : " "}`}>
                     {val.name}
                   </Link>
