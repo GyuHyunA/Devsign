@@ -130,7 +130,7 @@ const CategoriA = () => {
         </div>
       </div>
       <div className="cate-edit">
-        <Link to="/homea" className="cate-write">
+        <Link to="/homea/postedit" className="cate-write">
           <span>글쓰기</span>
         </Link>
         <Link to="/homea/setting" className="cate-setting">
