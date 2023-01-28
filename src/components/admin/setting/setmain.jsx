@@ -9,7 +9,7 @@ const SetMainAStle = styled.div`
   position: relative;
 `;
 
-function SettingMainA() {
+function SettingMain() {
   return (
     <SetMainAStle>
       <SetCate />
@@ -22,4 +22,4 @@ function SettingMainA() {
   );
 }
 
-export default SettingMainA;
+export default SettingMain;
