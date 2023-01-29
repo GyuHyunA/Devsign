@@ -98,19 +98,19 @@ const catelist = [
     children: [
       {
         id: 1,
-        link: "setting/text",
+        link: "text",
         name: "글 관리",
         catenum: "글 관리",
       },
       {
         id: 2,
-        link: "setting/page",
+        link: "page",
         name: "페이지 관리",
         catenum: "페이지 관리",
       },
       {
         id: 3,
-        link: "setting/categori",
+        link: "categori",
         name: "카테고리 관리",
         catenum: "카테고리 관리",
       },
@@ -123,7 +123,7 @@ const catelist = [
     children: [
       {
         id: 4,
-        link: "setting/reply",
+        link: "reply",
         name: "댓글 관리",
         catenum: "댓글 관리",
       },
@@ -136,7 +136,7 @@ const catelist = [
     children: [
       {
         id: 5,
-        link: "setting/chart",
+        link: "chart",
         name: "방문 통계",
         catenum: "방문 통계",
       },
