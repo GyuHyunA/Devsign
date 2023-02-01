@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const NavStyled = styled.nav`
+const NavEditStyled = styled.nav`
   width: 100vw;
   height: 80px;
   background: #ffffff;
@@ -45,9 +45,9 @@ const NavStyled = styled.nav`
   }
 `;
 
-const NavAdmin = () => {
+const NavEdit = () => {
   return (
-    <NavStyled>
+    <NavEditStyled>
       <div className="nav-contain">
         <div className="nav-logo-wrap">
           <Link to="/">
@@ -55,12 +55,12 @@ const NavAdmin = () => {
             <h2>블로그</h2>
           </Link>
         </div>
-        <Link to="/editpost" className="write-wrap">
-          글작성
+        <Link to="/setting" className="write-wrap">
+          완료
         </Link>
       </div>
-    </NavStyled>
+    </NavEditStyled>
   );
 };
 
-export default NavAdmin;
+export default NavEdit;

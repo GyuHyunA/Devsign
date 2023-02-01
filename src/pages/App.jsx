@@ -1,6 +1,6 @@
 import { Route, Routes, useLocation, useRoutes } from "react-router-dom";
 import { postList } from "../components/dummy/dummy";
-import { Contact, Home, Incontents, Nav, Nopage, PostEdit, PostHome, SettingMain, WorkHome } from "../components";
+import { Contact, Home, Incontents, Nopage, PostEdit, PostHome, SettingMain, WorkHome } from "../components";
 
 function App() {
   const location = useLocation();
@@ -23,7 +23,6 @@ function App() {
 
   return (
     <>
-      <Nav />
       <Routes>
         <Route path="*" element={<Nopage />} />
         <Route path="/" element={<Home />} />

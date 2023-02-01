@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import Nav from "../nav/nav";
 // import Nav from "../nav/nav";
 
 const ContentsStyle = styled.section`
   width: 100vw;
   height: 100vh;
-  padding-top: 180px;
   display: flex;
   justify-content: center;
+  .contents-contain {
+    padding-top: 180px;
+  }
   .contents-wrap {
     width: 768px;
     .title-wrap {
@@ -61,37 +64,40 @@ const ContentsStyle = styled.section`
 const Incontents = ({ title, contents, hesh, cate }) => {
   return (
     <ContentsStyle>
-      <div className="contents-wrap">
-        <div className="title-wrap">
-          <h2 className="title">{title}</h2>
-          <div className="share-wrap">
-            <img src="/assets/icons/heart.png" alt="" className="logo_heart cursor" />
-            <img src="/assets/icons/share.png" alt="" className="logo_share cursor" />
+      <Nav />
+      <div className="contents-contain">
+        <div className="contents-wrap">
+          <div className="title-wrap">
+            <h2 className="title">{title}</h2>
+            <div className="share-wrap">
+              <img src="/assets/icons/heart.png" alt="" className="logo_heart cursor" />
+              <img src="/assets/icons/share.png" alt="" className="logo_share cursor" />
+            </div>
           </div>
-        </div>
-        <div className="date-visit-wrap">
-          <p className="date">2023/01/06</p>
-          <p className="visitor">조회 : 0</p>
-        </div>
-        <section className="content-wrap">
-          <div className="text-wrap">
-            {/* append넣어서 텍스트 입력하기!! */}
-            <p>{contents}</p>
-            <br />
-            <div style={{ background: "#FFFFFF", width: "768px", height: "200px" }}></div>
+          <div className="date-visit-wrap">
+            <p className="date">2023/01/06</p>
+            <p className="visitor">조회 : 0</p>
           </div>
-        </section>
-        <div className="hr"></div>
-        <div className="hashtag-wrap">
-          {hesh.map((v) => {
-            return (
-              <div className="tag-box" key={v.id}>
-                <span className="tag">#{v.tag}</span>
-              </div>
-            );
-          })}
-          <div className="tag-box">
-            <span className="tag">${cate}</span>
+          <section className="content-wrap">
+            <div className="text-wrap">
+              {/* append넣어서 텍스트 입력하기!! */}
+              <p>{contents}</p>
+              <br />
+              <div style={{ background: "#FFFFFF", width: "768px", height: "200px" }}></div>
+            </div>
+          </section>
+          <div className="hr"></div>
+          <div className="hashtag-wrap">
+            {hesh.map((v) => {
+              return (
+                <div className="tag-box" key={v.id}>
+                  <span className="tag">#{v.tag}</span>
+                </div>
+              );
+            })}
+            <div className="tag-box">
+              <span className="tag">${cate}</span>
+            </div>
           </div>
         </div>
       </div>

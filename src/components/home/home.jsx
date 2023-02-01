@@ -2,17 +2,23 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { postList } from "../dummy/dummy";
+import Nav from "../nav/nav";
 import Categori from "./categori";
 
 const HomeStyle = styled.section`
-  padding-top: 180px;
+  .home-contain {
+    padding-top: 180px;
+  }
 `;
 
 const Home = () => {
   return (
     <HomeStyle>
-      <Categori />
-      {postList.length === 0 ? <IsNotContents /> : postList.map((v) => <IsContents img={v.image} title={v.title} contents={v.contents} id={v.id} key={v.id} />)}
+      <Nav />
+      <div className="home-contain">
+        <Categori />
+        {postList.length === 0 ? <IsNotContents /> : postList.map((v) => <IsContents img={v.image} title={v.title} contents={v.contents} id={v.id} key={v.id} />)}
+      </div>
     </HomeStyle>
   );
 };

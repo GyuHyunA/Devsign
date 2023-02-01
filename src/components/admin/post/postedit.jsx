@@ -1,11 +1,12 @@
 import React from "react";
 import { useRef } from "react";
 import styled from "styled-components";
+import NavEdit from "../nav/navedit";
 
 const PostEditStyle = styled.section`
-width: 100vw;
-display: flex;
-justify-content: center;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
   .post-wrap {
     padding: 200px;
     width: 846px;
@@ -93,6 +94,7 @@ const PostEdit = () => {
   };
   return (
     <PostEditStyle>
+      <NavEdit />
       <div className="post-wrap">
         <div className="select-wrap">
           <select name="categori" id="">
