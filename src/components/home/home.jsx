@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { postList } from "../dummy/dummy";
-import Nav from "../nav/nav";
 import Categori from "./categori";
 
 const HomeStyle = styled.section`
@@ -14,7 +13,6 @@ const HomeStyle = styled.section`
 const Home = () => {
   return (
     <HomeStyle>
-      <Nav />
       <div className="home-contain">
         <Categori />
         {postList.length === 0 ? <IsNotContents /> : postList.map((v) => <IsContents img={v.image} title={v.title} contents={v.contents} id={v.id} key={v.id} />)}

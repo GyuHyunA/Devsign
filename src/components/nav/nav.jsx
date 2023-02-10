@@ -72,7 +72,7 @@ const Nav = () => {
         <ul className="nav-navlist">
           {navList.map((v, i) => (
             <li key={v.id}>
-              <Link to={`/${v.url}`} onClick={() => setisNavList(v.id)} className={`${IsNavList === i ? "nav-active" : " "}`}>
+              <Link to={`${v.url}`} onClick={() => setisNavList(v.id)} className={`${IsNavList === i ? "nav-active" : " "}`}>
                 {v.tag}
               </Link>
             </li>
