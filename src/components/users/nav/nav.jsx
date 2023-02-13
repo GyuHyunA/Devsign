@@ -57,13 +57,13 @@ const NavStyled = styled.nav`
 `;
 
 const Nav = () => {
-  const [IsNavList, setisNavList] = useState(3);
+  const [isNavList, setIsNavList] = useState(3);
 
   return (
     <NavStyled>
       <div className="nav-contain">
         <div className="nav-logo-wrap">
-          <Link to="/" onClick={() => setisNavList(3)}>
+          <Link to="/" onClick={() => setIsNavList(3)}>
             <div className="temp-logo"></div>
             {/* <img src="" alt="" /> */}
             <h2>블로그</h2>
@@ -72,7 +72,7 @@ const Nav = () => {
         <ul className="nav-navlist">
           {navList.map((v, i) => (
             <li key={v.id}>
-              <Link to={`${v.url}`} onClick={() => setisNavList(v.id)} className={`${IsNavList === i ? "nav-active" : " "}`}>
+              <Link to={`/${v.url}`} onClick={() => setIsNavList(v.id)} className={`${isNavList === v.id ? "nav-active" : " "}`}>
                 {v.tag}
               </Link>
             </li>
@@ -100,8 +100,5 @@ const navList = [
     id: 2,
     tag: "Contact",
     url: "contact",
-  },
-  {
-    id: "logo"
   },
 ];

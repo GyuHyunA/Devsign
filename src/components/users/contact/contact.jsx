@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Nav from "../nav/nav";
 
-const WorkHomeStyle = styled.section`
-  .workhome-wrap {
+const ContactStyle = styled.section`
+  .contact-wrap {
     width: 100vw;
     height: 100vh;
     padding-top: 180px;
@@ -12,15 +11,14 @@ const WorkHomeStyle = styled.section`
   }
 `;
 
-const WorkHome = () => {
+const Contact = () => {
   return (
-    <WorkHomeStyle>
-      <Nav />
-      <div className="workhome-wrap">
+    <ContactStyle>
+      <div className="contact-wrap">
         <h6>페이지 준비중 입니다</h6>
       </div>
-    </WorkHomeStyle>
+    </ContactStyle>
   );
 };
 
-export default WorkHome;
+export default Contact;

@@ -15,7 +15,13 @@ const Home = () => {
     <HomeStyle>
       <div className="home-contain">
         <Categori />
-        {postList.length === 0 ? <IsNotContents /> : postList.map((v) => <IsContents img={v.image} title={v.title} contents={v.contents} id={v.id} key={v.id} />)}
+        {postList.length === 0 ? (
+          <IsNotContents />
+        ) : (
+          postList.map((v) => {
+            return <IsContents img={v.image} title={v.title} contents={v.contents} id={v.id} key={v.id} />;
+          })
+        )}
       </div>
     </HomeStyle>
   );
@@ -56,7 +62,7 @@ const IsContentsStyle = styled.div`
 const IsContents = ({ img, title, contents, id }) => {
   return (
     <IsContentsStyle className="contents-wrap">
-      <Link to={`content/post:${id}`}>
+      <Link to={`:${id}`}>
         <div className="thumb">{img}</div>
         <div className="title-wrap">
           <h1 className="title">{title}</h1>
