@@ -7,10 +7,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  width: 100vw;
   background: #f1f3f6;
   font-family: "Nanum Gothic", sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
