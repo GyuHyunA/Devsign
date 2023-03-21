@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import { Contact, Home, Nav, Nopage, PostEdit, PostHome, SettingMain, WorkHome } from "../components";
+import { Contact, Home, Incontents, Nav, Nopage, PostEdit, PostHome, SettingMain, WorkHome } from "../components";
 
 function App() {
-  // const [navCheck, setNavCheck] = useState("");
   const urlLog = useLocation();
   const urlString = urlLog.pathname.substring(1, 8);
   console.log(urlString);
@@ -19,6 +18,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="setting/*" element={<SettingMain />} />
         <Route path="editpost/*" element={<PostEdit />} />
+        <Route path="/post/1" element={<Incontents />} />
       </Routes>
     </>
   );
