@@ -7,6 +7,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  width: 100vw;
+  height: 100vh;
   background: #f1f3f6;
   font-family: "Nanum Gothic", sans-serif;
 }
@@ -15,63 +17,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 p {
   margin: 0;
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-h1 {
+// 콘텐츠 타이틀
+h5 {
   margin: 0;
   padding: 0;
+
   font-weight: 700;
   font-size: 25px;
 }
 
-h2 {
-  font-weight: 700;
-  font-size: 21px;
-  margin: 0;
-  padding: 0;
-}
-h6 {
+// subtitle
+.st {
   font-weight: 400;
-  font-size: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-// 매크로
-.wire-icon-a {
-  width: 23px;
-  height: 23px;
-  background-color: gray;
-  border-radius: 50%;
-}
-
-.ml {
-  margin-left: 15px;
-}
-
-.hr {
-  border: 1px solid #eaeaea;
-}
-
-.cursor {
-  cursor: pointer;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
