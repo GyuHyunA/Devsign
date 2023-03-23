@@ -1,10 +1,11 @@
 import React from "react";
-import { UNavi } from "../components";
+import { UHome, UNavi } from "../components";
 
 function App() {
   return (
     <>
       <UNavi />
+      <UHome />
     </>
   );
 }

@@ -8,6 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   width: 100vw;
+  height: 100vh;
   background: #f1f3f6;
   font-family: "Nanum Gothic", sans-serif;
 }
@@ -19,4 +20,27 @@ code {
 a {
   color: black;
   text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// 콘텐츠 타이틀
+h5 {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 25px;
+}
+
+// subtitle
+.st {
+  font-weight: 400;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
