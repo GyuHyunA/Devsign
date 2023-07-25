@@ -3,19 +3,20 @@ import { styled } from "styled-components";
 
 const UHomeStyle = styled.section`
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   /* margin: 0 320px; */
   .contents {
     width: 100%;
-    max-width: 1028px;
+    max-width: 1280px;
     min-width: 480px;
     margin: 0 320px;
     display: grid;
     position: relative;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+    place-items: center;
   }
 `;
 
@@ -23,6 +24,8 @@ const Uhome: React.FC = () => {
   return (
     <UHomeStyle>
       <div className="contents">
+        <Box />
+        <Box />
         <Box />
         <Box />
       </div>
