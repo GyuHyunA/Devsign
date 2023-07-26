@@ -6,18 +6,19 @@ const UHomeStyle = styled.section`
   width: 100vw;
   /* height: 100vh; */
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   /* margin: 0 320px; */
   .contents {
     width: 100%;
-    max-width: 1280px;
+    max-width: 850px;
     min-width: 480px;
-    margin: 0 320px;
+    margin-left: 320px;
     display: grid;
     position: relative;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     place-items: center;
+    margin-right: 127px;
   }
 `;
 
@@ -32,6 +33,7 @@ const Uhome: React.FC = () => {
           <Box />
           <Box />
         </div>
+        <CateGori />
       </UHomeStyle>
     </>
   );
@@ -114,5 +116,102 @@ const Box = () => {
         <p className="box-date">Date</p>
       </a>
     </BoxStyle>
+  );
+};
+
+const CateStyle = styled.div`
+  width: 100%;
+  max-width: 300px;
+  min-width: 220px;
+  .cate-contain {
+    width: 210px;
+    h1 {
+      width: inherit;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eaeaea;
+      margin-bottom: 10px;
+    }
+    div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      a {
+        margin-bottom: 5px;
+        &:last-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .recent-contain {
+    width: 210px;
+    h1 {
+      width: inherit;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eaeaea;
+      margin-bottom: 10px;
+    }
+    div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      a {
+        margin-bottom: 5px;
+        &:last-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .link {
+    width: 210px;
+    h1 {
+      width: inherit;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eaeaea;
+      margin-bottom: 10px;
+    }
+    div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      a {
+        margin-right: 5px;
+      }
+    }
+  }
+`;
+const CateGori = () => {
+  return (
+    <CateStyle>
+      <div className="cate-contain">
+        <h1>Categori</h1>
+        <div>
+          <a href="/">React</a>
+          <a href="/">일상</a>
+          <a href="/">디자인</a>
+        </div>
+      </div>
+      <div className="recent-contain">
+        <h1>Recent</h1>
+        <div>
+          <a href="/">제목...</a>
+          <a href="/">제목2...</a>
+        </div>
+      </div>
+      <div className="link">
+        <h1>Link</h1>
+        <div>
+          <a href="/">
+            <img src="assets/Icons/github.svg" alt="" />
+          </a>
+          <a href="/">
+            <img src="assets/Icons/insta.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </CateStyle>
   );
 };
