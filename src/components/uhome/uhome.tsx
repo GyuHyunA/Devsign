@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "styled-components";
+import Unav from "../unav/unav";
 
 const UHomeStyle = styled.section`
   width: 100vw;
@@ -22,14 +23,17 @@ const UHomeStyle = styled.section`
 
 const Uhome: React.FC = () => {
   return (
-    <UHomeStyle>
-      <div className="contents">
-        <Box />
-        <Box />
-        <Box />
-        <Box />
-      </div>
-    </UHomeStyle>
+    <>
+      <Unav />
+      <UHomeStyle>
+        <div className="contents">
+          <Box />
+          <Box />
+          <Box />
+          <Box />
+        </div>
+      </UHomeStyle>
+    </>
   );
 };
 
@@ -37,8 +41,8 @@ export default Uhome;
 
 const BoxStyle = styled.div`
   width: 100%;
-  max-width: 514px;
-  min-width: 360px;
+  max-width: 414px;
+  min-width: 160px;
   height: 278px;
   padding: 10px;
   border-radius: 10px;
@@ -47,7 +51,6 @@ const BoxStyle = styled.div`
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
   .box-title {
     color: #000;
-    font-family: Noto Sans;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;

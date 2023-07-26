@@ -1,13 +1,13 @@
 import React from "react";
 import "../css/App.scss";
-import Unav from "../components/unav/unav";
-import Uhome from "../components/uhome/uhome";
+import { useRoutes } from "react-router-dom";
+import { routerlist } from "../routers/router";
 
 const App: React.FC = () => {
+  const routers = useRoutes(routerlist);
   return (
     <>
-      <Unav />
-      <Uhome />
+      {routers}
     </>
   );
 };
