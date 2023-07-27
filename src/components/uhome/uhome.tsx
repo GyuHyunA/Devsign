@@ -1,32 +1,33 @@
 import React from "react";
 import { styled } from "styled-components";
 import Unav from "../unav/unav";
+import { useMediaQuery } from "react-responsive";
 
-const UHomeStyle = styled.section`
+const UHomeStyle = styled.section<{ isDeskTop?: boolean }>`
   width: 100vw;
-  /* height: 100vh; */
   display: flex;
-  /* justify-content: center; */
-  /* margin: 0 320px; */
   .contents {
     width: 100%;
-    max-width: 850px;
+    max-width: ${(p) => (p.isDeskTop ? 850 + "px" : 30 + "px")};
     min-width: 480px;
-    margin-left: 320px;
+    margin-left: ${(p) => (p.isDeskTop ? 320 + "px" : 210 + "px")};
     display: grid;
     position: relative;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     place-items: center;
-    margin-right: 127px;
+    margin-right: ${(p) => (p.isDeskTop ? 127 + "px" : 100 + "px")};
   }
 `;
 
 const Uhome: React.FC = () => {
+  const isDeskTop = useMediaQuery({
+    query: `(min-width: 1300px)`,
+  });
   return (
     <>
-      <Unav />
-      <UHomeStyle>
+      <Unav isDeskTop={isDeskTop}/>
+      <UHomeStyle isDeskTop={isDeskTop}>
         <div className="contents">
           <Box />
           <Box />
