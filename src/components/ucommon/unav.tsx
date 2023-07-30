@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const UnavStyle = styled.nav<{ isDeskTop: boolean }>`
+const UnavStyle = styled.nav`
   /* width: 100%; */
   height: 70px;
   margin: 0 320px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: ${(p) => (p.isDeskTop ? 0 + " " + 320 + "px" : 0 + " " + 210 + "px")};
+  margin-bottom: 100px;
   .logo {
     width: 100px;
     padding: 20px 0;
@@ -48,13 +48,13 @@ const UnavStyle = styled.nav<{ isDeskTop: boolean }>`
   }
 `;
 
-interface Props {
-  isDeskTop: boolean;
-}
+// interface Props {
+//   isDeskTop: boolean;
+// }
 
-const Unav = ({ isDeskTop }: Props) => {
+const Unav = () => {
   return (
-    <UnavStyle isDeskTop={isDeskTop}>
+    <UnavStyle>
       <div className="logo left">
         <Link to="/">Leemit.log</Link>
       </div>
@@ -65,12 +65,14 @@ const Unav = ({ isDeskTop }: Props) => {
             <img src="assets/Icons/search.svg" alt="" />
           </Link>
         </div>
-        <a href="about" className="about">
+        <Link to="about" className="about">
           About Me
-        </a>
+        </Link>
       </div>
     </UnavStyle>
   );
 };
 
 export default Unav;
+
+// margin: ${(p) => (p.isDeskTop ? 0 + " " + 320 + "px" : 0 + " " + 210 + "px")};
